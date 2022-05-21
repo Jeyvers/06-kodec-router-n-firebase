@@ -1,0 +1,122 @@
+You are to create a student dashboard that shows different subject.
+Eg Chemistry, Biology, Physics, Mathematics and Englis Language.
+
+Each of this subject should route to each page showing basic introduction of it.
+
+Things to cove.
+A Landing page that tells about the school with a login button
+A login in page asking user to login either with Firebase Google or Email and Password
+Dashboard.
+
+This is your db. Copy it and past inside your db file.
+ const course = [
+{
+   id: 1,
+   name: "chemistry",
+   details: {
+     intro: "Chemistry is a physical science, and it is the study of the properties of and interactions between matter and energy. In other words, chemistry is a way to study the properties, characteristics, and physical and chemical changes of matter.",
+     branches: [
+       "Biochemistry",
+       "Analytical chemistry",
+       "Physical Chemistry"
+     ]
+   }
+ },
+ {
+   id: 1,
+   name: "Physics",
+   details: {
+     intro: "Physics is a science. Science works according to the scientific method. The scientific method accepts only reason, logic, and experimental evidence to tell between what is scientifically correct and what is not. Scientists do not simply believe – they test, and keep testing until satisfied. Just because some “big scientist” says something is right, that thing does not become a fact of science.",
+     branches: [
+       "Classical Physics.",
+       "Modern Physics.",
+       "Nuclear Physics.",
+       "Atomic Physics.",
+       "Geophysics.",
+       "Biophysics.",
+       "Mechanics.",
+       "Acoustics.",
+     ]
+   }
+ },
+ {
+   id: 1,
+   name: "Mathematics",
+   details: {
+     intro: "Mathematics is  not  only  concerned with everyday problems, but  also  with  using  imagination,  intuition  and  reasoning  to find new ideas  and  to  solve puzzling problems.",
+      branches: [
+       "Algebra.",
+       "Geometry.",
+       "Trigonometry.",
+       "Calculus.",
+       "Statistics and Probability.",
+     ]
+   }
+ },
+ {
+   id: 1,
+   name: "Biology",
+   details: {
+     intro: "The word biology means, the science of life, from the Greek bios, life, and logos, word or knowledge. Therefore, Biology is the science of Living Things. That is why Biology is sometimes known as Life Science.",
+     branches: [
+       "Anatomy.",
+       "Botany.",
+       "Taxonomy.",
+       "Zoology.",
+       "Microbiology.",
+       "Mycology.",
+       "Phycology.",
+       "Parasitology."
+     ]
+   }
+ },
+ {
+   id: 1,
+   name: "English Language",
+   details: {
+     intro: "English studies (usually called simply English) is an academic discipline taught in primary, secondary, and post-secondary education in English-speaking countries; it is not to be confused with English taught as a foreign language, which is a distinct discipline. It involves the study and exploration of texts created in English literature.",
+     branches: [
+       "English linguistics.",
+       "English sociolinguistics.",
+       "Discourse analysis in English.",
+       "English Stylistics (linguistics)",
+       "World Englishes.",
+       "History of the English language.",
+       "Composition studies.",
+       "Rhetoric.",
+     ]
+   }
+ }
+]
+export default course;
+
+
+Note: Color Code is Kodeamp color
+
+Landing Page: It should look like this. But remove the appstore and the google store but background should be our color. The only link on the top is Login and the name of your school.
+
+
+Login Page but ignore the yellow background.
+
+Dahboard page should look like the below bashboard and the only thing I want to see on sidebar are.
+Dashboard
+Courses : To show list of all the courses
+Profile page
+Logout
+
+Dashboard Page.
+Note: Instead of “English Crash” Course and the button, it should be “Welcome the name of the Login User”.
+Look for this svg image and use it.
+
+
+Courses page: List of all the courses.
+
+
+Single Courses page: when you click to view a single course.
+
+
+Profile page: (This page should show all the information of the login User)
+
+
+
+
