@@ -99,7 +99,7 @@ const Login = ({ runError }) => {
         </div>
         <div className='login-showcase-info'>
           <div className='logo'>
-            <img src='../img/undraw_handcrafts_mention.png' alt='' />
+            <img src={require('../img/undraw_handcrafts_mention.png')} alt='' />
             <span>TERRIS</span>
           </div>
           <div className='login-form'>
@@ -123,17 +123,17 @@ const Login = ({ runError }) => {
                 onChange={(e) => setPassword(e.target.value)}
               />
 
-              <input
-                type='submit'
-                onClick={(e) => loginWithEP(e)}
-                value={'Login'}
-              />
+              <button type='submit' onClick={(e) => loginWithEP(e)}>
+                Login
+              </button>
             </form>
-            <button onClick={() => signInWithGoogle()}>
-              {' '}
-              Sign in with Google{' '}
-            </button>
-            <Link to={'/register'}>Register</Link>
+            <div className='other-options'>
+              <button onClick={() => signInWithGoogle()}>
+                {' '}
+                Sign in with Google{' '}
+              </button>
+              <Link to={'/register'}>Register</Link>
+            </div>
           </div>
         </div>
       </div>

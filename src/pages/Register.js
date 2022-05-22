@@ -63,7 +63,7 @@ const Register = ({ runError }) => {
         </div>
         <div className='login-showcase-info'>
           <div className='logo'>
-            <img src='../img/undraw_handcrafts_mention.png' alt='' />
+            <img src={require('../img/undraw_handcrafts_mention.png')} alt='' />
             <span>TERRIS</span>
           </div>
           <div className='login-form'>
@@ -80,12 +80,9 @@ const Register = ({ runError }) => {
                 placeholder='Enter your password'
                 onChange={(e) => setPassword(e.target.value)}
               />
-
-              <input
-                type='submit'
-                onClick={(e) => registerWithEP(e)}
-                value={'Register'}
-              />
+              <button type='submit' onClick={(e) => registerWithEP(e)}>
+                Register
+              </button>
             </form>
             <Link to={'/login'}>Login</Link>
           </div>

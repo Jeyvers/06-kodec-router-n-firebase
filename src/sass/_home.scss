@@ -1,0 +1,101 @@
+.home {
+    background: $primary-color;
+    color: $white-color;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    position: fixed;
+    background: inherit;
+    height: 70px;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        border-bottom-right-radius: 200px;
+        border-top-right-radius: 200px;
+        background-color:
+            #0099cc;
+
+        width: 20px;
+        height: 100%;
+    }
+
+    .logo {
+        height: 30px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    button {
+        background: none;
+        color: white;
+        border: 1px solid $white-color;
+        padding: .5rem 1rem;
+        border-radius: .3rem;
+        font-size: medium;
+        font-weight: $bold-font-weight;
+    }
+
+
+}
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.landing-showcase {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background: url('../img/rough-bg.png') no-repeat center/cover;
+    // margin-top: -60px;
+    background-position: -50px 75px;
+    background-size: 150%;
+
+
+
+    .landing-info {
+        margin-top: 200px;
+        font-size: x-large;
+
+        h1 .primary {
+            color: rgb(6, 238, 176);
+        }
+
+        h1 .secondary {
+            color: rgba(242, 229, 177, 0.897);
+        }
+
+        p {
+            font-size: 1.3rem;
+        }
+    }
+
+    .landing-image {
+        margin-top: -70px;
+        // width: 190px;
+    }
+}
+
+.app-information {
+    padding: 2rem 0;
+    color: $black-color;
+    text-align: center;
+
+}

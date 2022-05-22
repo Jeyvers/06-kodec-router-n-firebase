@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.home {
+  background: #4b45c2;
+  color: #FFF;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav {
+  position: fixed;
+  background: inherit;
+  height: 70px;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+nav::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  border-bottom-right-radius: 200px;
+  border-top-right-radius: 200px;
+  background-color: #0099cc;
+  width: 20px;
+  height: 100%;
+}
+
+nav .logo {
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+nav button {
+  background: none;
+  color: white;
+  border: 1px solid #FFF;
+  padding: .5rem 1rem;
+  border-radius: .3rem;
+  font-size: medium;
+  font-weight: 700;
+}
+
+.landing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 50px;
+}
+
+.landing-showcase {
+  width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: url("../img/rough-bg.png") no-repeat center/cover;
+  background-position: -50px 75px;
+  background-size: 150%;
+}
+
+.landing-showcase .landing-info {
+  margin-top: 200px;
+  font-size: x-large;
+}
+
+.landing-showcase .landing-info h1 .primary {
+  color: #06eeb0;
+}
+
+.landing-showcase .landing-info h1 .secondary {
+  color: rgba(242, 229, 177, 0.897);
+}
+
+.landing-showcase .landing-info p {
+  font-size: 1.3rem;
+}
+
+.landing-showcase .landing-image {
+  margin-top: -70px;
+}
+
+.app-information {
+  padding: 2rem 0;
+  color: #222;
+  text-align: center;
+}
+
+.login-container {
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  margin: 0 auto;
+  place-items: center;
+  background: #4b45c2;
+}
+
+.login-container .login-showcase {
+  background: #FFF;
+  padding: 2rem;
+  border-radius: 2rem;
+  max-width: 80vw;
+  margin: 2rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  gap: 50px;
+}
+
+.login-container .login-showcase .login-showcase-expression, .login-container .login-showcase .login-showcase-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+  text-align: center;
+}
+
+.login-container .login-showcase .login-showcase-expression .login-header > *, .login-container .login-showcase .login-showcase-info .login-header > * {
+  padding: .5rem 0;
+}
+
+.login-container .login-showcase .login-showcase-expression .login-image, .login-container .login-showcase .login-showcase-info .login-image {
+  width: 100%;
+  height: 100%;
+}
+
+.login-container .login-showcase .login-showcase-info .logo {
+  width: 30%;
+}
+
+.login-container .login-showcase .login-showcase-info .logo span {
+  font-weight: 700;
+}
+
+.login-container .login-showcase .login-showcase-info .login-form form > * {
+  height: 40px;
+  width: 250px;
+  padding: 0 .5rem;
+  margin: .5rem 0;
+}
+
+.login-container .login-showcase .login-showcase-info .login-form button {
+  background-color: #4b45c2;
+  color: #FFF;
+  font-weight: 700;
+}
+
+.login-container .login-showcase .login-showcase-info .login-form button:hover {
+  color: #2cccfd;
+}
+
+.login-container .login-showcase .login-showcase-info .login-form .other-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: .5rem 1rem;
+}
+
+.login-container .login-showcase .login-showcase-info .login-form .other-options > * {
+  background: none;
+  color: #222;
+  font-size: 14px;
+  font-weight: 700;
+  padding: .5rem 0;
+  cursor: pointer;
+}
+
+.login-container .login-showcase .login-showcase-info .login-form .other-options > *:hover {
+  text-decoration: underline;
+}
+
+.icon {
+  font-size: 18px;
+  color: #FFF;
+  padding: .2rem;
+}
+
+.text {
+  display: none;
+}
+
+aside {
+  background: #003682;
+  height: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+aside h4 {
+  text-align: center;
+  color: #FFF;
+  margin: 4rem 0;
+}
+
+li {
+  position: relative;
+  padding: .6rem 2rem;
+}
+
+li a {
+  display: inline-block;
+  color: white;
+}
+
+li a:hover {
+  background: #4b45c2;
+}
+
+li a:hover .text {
+  display: block;
+}
+
+li a svg {
+  width: 25px;
+  height: 25px;
+}
+
+.dashboard {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  background: #074baa;
+  line-height: 2rem;
+}
+
+.dashboard-showcase {
+  margin: 3.75rem 1rem;
+}
+
+.user-showcase {
+  height: 60%;
+  background: #FFF;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.user-showcase h1 span {
+  color: #2cccfd;
+}
+
+.user-showcase p {
+  line-height: 1.3;
+}
+
+.user-showcase a {
+  display: inline-block;
+  margin-top: .5rem;
+  padding: .1rem 2rem;
+  background: #2cccfd;
+  border-radius: .5rem;
+}
+
+.user-showcase a button {
+  color: #FFF;
+  font-weight: 700;
+}
+
+.user-app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+/*# sourceMappingURL=index.css.map */

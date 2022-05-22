@@ -1,10 +1,10 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import Landing from './Landing';
+import Landing from '../components/Landing';
 
 const Home = () => {
   return (
-    <main>
+    <main className='home'>
       <Navbar />
       <Landing />
     </main>

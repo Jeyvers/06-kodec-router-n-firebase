@@ -2,9 +2,9 @@ import React from 'react';
 
 const Landing = () => {
   return (
-    <section>
-      <div className='showcase'>
-        <div className='showcase-info'>
+    <section className='landing'>
+      <div className='landing-showcase'>
+        <div className='landing-info'>
           <h1>
             <span className='primary'>Learn</span> on your class{' '}
             <span className='secondary '>schedule</span>
@@ -14,7 +14,7 @@ const Landing = () => {
             Taught by experts to help your performance and whatever comes next `}
           </p>
         </div>
-        <div className='showcase-image'>
+        <div className='landing-image'>
           <img src={require('../img/landing-page-girl.png')} alt='' />
         </div>
       </div>

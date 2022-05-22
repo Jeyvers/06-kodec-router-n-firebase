@@ -36,7 +36,7 @@ function App() {
       </Routes>
     </div>
   ) : (
-    <>
+    <div className='user-app'>
       <Sidebar />
       <Routes>
         <Route path='/dashboard' element={<Dashboard />} />
@@ -46,7 +46,7 @@ function App() {
 
         <Route path='/profile' element={<Profile />} />
       </Routes>
-    </>
+    </div>
   );
 }
 

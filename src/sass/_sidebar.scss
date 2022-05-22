@@ -1,0 +1,62 @@
+.icon {
+    font-size: 18px;
+    color: $white-color;
+    padding: .2rem;
+
+
+
+}
+
+.text {
+    display: none;
+}
+
+aside {
+    background: $tertiary-color;
+    height: 100%;
+    width: fit-content;
+    transition: all 0.5s;
+
+    h4 {
+        text-align: center;
+        color: $white-color;
+        margin: 4rem 0;
+    }
+
+}
+
+li {
+
+    position: relative;
+    padding: .6rem 2rem;
+
+
+
+    a {
+        // position: absolute;
+        display: inline-block;
+        color: white;
+
+
+        &:hover {
+            background: $primary-color;
+
+            .text {
+                display: block;
+            }
+        }
+
+
+    }
+
+}
+
+
+
+
+
+li a svg {
+
+    width: 25px;
+    height: 25px;
+}

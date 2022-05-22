@@ -7,12 +7,14 @@ const Dashboard = () => {
   const [{ user }, dispatch] = useStateValue();
   console.log(user);
   return (
-    <section>
+    <section className='dashboard'>
       <div className='dashboard-showcase'>
         <div className='user-showcase'>
           <div>
-            <h1>Welcome, {user.displayName} </h1>
-            <p>View all courses</p>
+            <h1>
+              Welcome, <br /> <span> {user.displayName}</span>
+            </h1>
+            <p>We have lots of courses for you!</p>
             <Link to={'/courses'}>
               <button>View</button>
             </Link>

@@ -1,0 +1,42 @@
+.dashboard {
+    display: grid;
+    height: 100vh;
+    background: #074baa;
+    line-height: 2rem;
+}
+
+.dashboard-showcase {
+    margin: 3.75rem 1rem;
+
+}
+
+.user-showcase {
+    height: 60%;
+    background: $white-color;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    h1 span {
+        color: $secondary-color;
+    }
+
+    p {
+        line-height: 1.3;
+    }
+
+    a {
+        display: inline-block;
+        margin-top: .5rem;
+        padding: .1rem 2rem;
+        background: $secondary-color;
+        border-radius: .5rem;
+
+        button {
+            color: $white-color;
+            font-weight: $bold-font-weight;
+        }
+    }
+
+}

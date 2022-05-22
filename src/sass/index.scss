@@ -1,0 +1,11 @@
+@import 'config';
+@import 'home';
+@import 'login';
+@import 'sidebar';
+@import 'dashboard';
+
+.user-app {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
