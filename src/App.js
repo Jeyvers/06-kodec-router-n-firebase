@@ -33,7 +33,7 @@ function App() {
           path='/register'
           element={<Register error={error} runError={runError} />}
         />
-        <Route path='*' element={<Error />} />
+        {/* <Route path='*' element={<Error />} /> */}
       </Routes>
     </div>
   ) : (
