@@ -3,13 +3,14 @@ import { RegisterFocusIcon } from '../icons';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
 import { auth } from '../firebase';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Register = ({ runError }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const regex = new RegExp('[a-z0-9]+@[a-z]+.[a-z]{2,3}');
   const emailIsCorrect = email.match(regex);
+  const navigate = useNavigate();
 
   const checkAllFields = () => {
     if (!emailIsCorrect) {
@@ -30,7 +31,7 @@ const Register = ({ runError }) => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-
+          navigate('/login');
           // ...
           console.log(user);
         })

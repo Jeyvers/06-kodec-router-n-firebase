@@ -1,6 +1,6 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Db from '../db';
-import SingleCourse from './SingleCourse';
 
 const Courses = () => {
   const [courses, setCourses] = useState(Db);
@@ -8,7 +8,9 @@ const Courses = () => {
   return (
     <div>
       {courses.map((course) => (
-        <SingleCourse key={course.id} {...course} />
+        <Link to={`/courses/${course.id}`} key={course.id}>
+          <div>{course.name}</div>
+        </Link>
       ))}
     </div>
   );

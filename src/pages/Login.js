@@ -1,8 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
 import { LoginFocusIcon } from '../icons';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import {
+  GoogleAuthProvider,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+} from 'firebase/auth';
 import { useState } from 'react';
-import { auth } from '../firebase';
+import { auth, provider } from '../firebase';
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../context';
 import { actionTypes } from '../reducer';
@@ -13,10 +18,10 @@ const Login = ({ runError }) => {
   const [password, setPassword] = useState('');
   const [displayName, setDisplayName] = useState('');
   const regex = new RegExp('[a-z0-9]+@[a-z]+.[a-z]{2,3}');
+  const navigate = useNavigate();
 
   const loginWithEP = (e) => {
     e.preventDefault();
-
     if (email.match(regex) && password && displayName) {
       signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
@@ -29,6 +34,11 @@ const Login = ({ runError }) => {
             user: user,
           });
           console.log(user);
+          navigate('/dashboard');
+        })
+        .then(() => {
+          // window.history.pushState('', 'Dashboard', '/dashboard');
+          // window.location.assign('/dashboard');
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -46,6 +56,33 @@ const Login = ({ runError }) => {
       setPassword('');
       setDisplayName('');
     } else runError('Please fill all fields with the appropriate information');
+  };
+
+  const signInWithGoogle = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        // The signed-in user info.
+        const user = result.user;
+        // ...
+        dispatch({
+          type: actionTypes.SET_USER,
+          user: user,
+        });
+        navigate('/dashboard');
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.customData.email;
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        // ...
+      });
   };
 
   return (
@@ -85,13 +122,17 @@ const Login = ({ runError }) => {
                 placeholder='Enter your password'
                 onChange={(e) => setPassword(e.target.value)}
               />
+
               <input
                 type='submit'
                 onClick={(e) => loginWithEP(e)}
                 value={'Login'}
               />
-              <button> Google </button>
             </form>
+            <button onClick={() => signInWithGoogle()}>
+              {' '}
+              Sign in with Google{' '}
+            </button>
             <Link to={'/register'}>Register</Link>
           </div>
         </div>

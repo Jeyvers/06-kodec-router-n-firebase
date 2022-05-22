@@ -1,18 +1,26 @@
 import { TeacherIllus } from '../icons';
+import Db from '../db';
+import { useState } from 'react';
+import { useParams } from 'react-router';
 
-const SingleCourse = ({ name, details }) => {
+const SingleCourse = () => {
+  const { courseId } = useParams();
+  const [courses, setCourses] = useState(Db);
+
+  const course = courses.find((course) => course.id == courseId);
+  console.log(course);
   return (
     <section className='singleCourseContainer'>
       <div className='singleCourseIntroImg'>
         <TeacherIllus />
-        <p>Introduction to {name}</p>
+        <p>Introduction to {course.name}</p>
       </div>
       <div className='single-course-info'>
-        <h3>Introduction to {name}</h3>
-        <p>{details.intro}</p>
+        <h3>Introduction to {course.name}</h3>
+        <p>{course.details.intro}</p>
         <h5>Branches</h5>
         <ul>
-          {details.branches.map((branch) => (
+          {course.details.branches.map((branch) => (
             <li>{branch}</li>
           ))}
         </ul>

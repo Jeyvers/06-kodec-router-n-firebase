@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Courses from './components/Courses';
-import Navbar from './components/Navbar';
+import Profile from './components/Profile';
+import Sidebar from './components/Sidebar';
+import SingleCourse from './components/SingleCourse';
 import { useStateValue } from './context';
 import Dashboard from './pages/Dashboard';
-import Landing from './pages/Landing';
+import Error from './pages/Error';
+import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 
@@ -26,21 +29,24 @@ function App() {
         </div>
       )}
       <Routes>
-        <Route
-          path='/'
-          element={
-            <>
-              <Navbar />
-              <Landing />
-            </>
-          }
-        />
+        <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login runError={runError} />} />
         <Route path='/register' element={<Register runError={runError} />} />
+        <Route path='*' element={<Error />} />
       </Routes>
     </div>
   ) : (
-    <Dashboard />
+    <>
+      <Sidebar />
+      <Routes>
+        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/courses' element={<Courses />} />
+        <Route path='/courses/:courseId' element={<SingleCourse />} />
+        <Route path='*' element={<Error />}></Route>
+
+        <Route path='/profile' element={<Profile />} />
+      </Routes>
+    </>
   );
 }
 
