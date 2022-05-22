@@ -48,6 +48,11 @@
             }
 
             .login-form {
+                form {
+                    display: flex;
+                    flex-direction: column;
+                }
+
                 form>* {
                     height: 40px;
                     width: 250px;

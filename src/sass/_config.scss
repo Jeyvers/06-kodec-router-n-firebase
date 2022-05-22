@@ -8,15 +8,12 @@ $bold-font-weight: 700;
 $light-font-size: 14px;
 $regular-font-size: 16px;
 
-
-
 // COLORS
 $primary-color: #4b45c2;
 $secondary-color: #2cccfd;
 $tertiary-color: #003682;
 $white-color: #FFF;
 $black-color: #222;
-
 
 
 * {
@@ -48,4 +45,10 @@ button {
 ul {
     list-style-type: none;
 
+}
+
+@mixin media-md {
+    @media screen and (min-width: 800px) {
+        @content;
+    }
 }

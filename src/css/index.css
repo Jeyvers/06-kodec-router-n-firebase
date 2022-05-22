@@ -208,6 +208,16 @@ nav button {
   font-weight: 700;
 }
 
+.login-container .login-showcase .login-showcase-info .login-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .login-container .login-showcase .login-showcase-info .login-form form > * {
   height: 40px;
   width: 250px;
@@ -258,7 +268,7 @@ nav button {
 }
 
 .text {
-  display: none;
+  visibility: hidden;
 }
 
 aside {
@@ -292,12 +302,7 @@ li a:hover {
 }
 
 li a:hover .text {
-  display: block;
-}
-
-li a svg {
-  width: 25px;
-  height: 25px;
+  visibility: visible;
 }
 
 .dashboard {
@@ -347,24 +352,24 @@ li a svg {
   margin-bottom: 1rem;
 }
 
-.courses div {
+.courses .course-list div {
   text-transform: capitalize;
   margin-bottom: 1rem;
   text-align: center;
 }
 
-.courses div a {
+.courses .course-list div a {
   display: inline-block;
   padding: 1rem;
   color: #FFF;
   font-weight: 700;
 }
 
-.courses div:nth-child(n + 1) {
+.courses .course-list div:nth-child(n + 1) {
   background-color: #4b45c2;
 }
 
-.courses div:nth-child(2n + 1) {
+.courses .course-list div:nth-child(2n + 1) {
   background-color: #2cccfd;
 }
 
@@ -520,6 +525,106 @@ li a svg {
   min-width: 250px;
   min-height: 40px;
   background: #da0505;
+}
+
+@media screen and (min-width: 800px) {
+  .landing .landing-showcase {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 20px;
+    height: 500px;
+  }
+  .landing .landing-showcase .landing-info {
+    margin-top: 0;
+  }
+  .landing .landing-image {
+    margin: 0;
+  }
+  .landing .app-information {
+    background-color: #FFF;
+  }
+  .login-container .login-showcase {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  aside {
+    min-width: 180px;
+  }
+  aside .text {
+    visibility: visible;
+  }
+  .dashboard {
+    width: 100vw;
+    height: 100vh;
+  }
+  .dashboard .user-showcase {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: 400px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .dashboard .user-showcase h1 {
+    font-size: 2rem;
+  }
+  .dashboard .user-showcase .user-img-showcase {
+    height: 100%;
+  }
+  .dashboard .user-showcase .dashboard-user-info {
+    min-width: 300px;
+    line-height: 2;
+  }
+  .dashboard .user-showcase .dashboard-user-info button {
+    width: 150px;
+    border-radius: none;
+  }
+  .course-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .course-list div {
+    width: 170px;
+  }
+  .single-course .single-course-img {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .single-course .single-course-img p {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .single-course .single-course-img svg {
+    width: 60%;
+  }
+  .profile .user-information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.5rem;
+  }
+  .profile .user-information .info {
+    min-width: 170px;
+    text-align: center;
+  }
 }
 
 .user-app {

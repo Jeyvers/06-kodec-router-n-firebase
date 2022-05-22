@@ -10,7 +10,7 @@ const Landing = () => {
             <span className='secondary '>schedule</span>
           </h1>
           <p>
-            {`  Learn and improve skills across business, tech, design, andmore.
+            {`  Learn and improve skills across business, tech, design, and more.
             Taught by experts to help your performance and whatever comes next `}
           </p>
         </div>

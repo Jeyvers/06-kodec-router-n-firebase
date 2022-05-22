@@ -1,0 +1,122 @@
+@include media-md {
+
+    // Landing 
+    .landing {
+
+        .landing-showcase {
+            flex-direction: row;
+            align-items: center;
+            margin-top: 20px;
+            height: 500px;
+
+            .landing-info {
+                margin-top: 0;
+            }
+        }
+
+        .landing-image {
+            margin: 0;
+
+        }
+
+        .app-information {
+            background-color: $white-color;
+        }
+    }
+
+
+    // Login
+    .login-container {
+
+
+        .login-showcase {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+
+
+    }
+
+    // Sidebar
+    aside {
+        min-width: 180px;
+
+
+
+        .text {
+            visibility: visible;
+        }
+    }
+
+    // Dashboard 
+    .dashboard {
+        width: 100vw;
+        height: 100vh;
+
+        .user-showcase {
+            flex-direction: row;
+            justify-content: space-evenly;
+            height: 400px;
+            align-items: center;
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .user-img-showcase {
+                height: 100%;
+            }
+
+            .dashboard-user-info {
+                min-width: 300px;
+                line-height: 2;
+
+                button {
+                    width: 150px;
+                    border-radius: none;
+                }
+            }
+        }
+    }
+
+    // Courses 
+    .course-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        div {
+            width: 170px;
+        }
+    }
+
+    // Single Course 
+    .single-course {
+        .single-course-img {
+            flex-direction: row;
+
+            p {
+                text-transform: uppercase;
+                font-weight: $bold-font-weight;
+            }
+
+            svg {
+                width: 60%;
+            }
+        }
+    }
+
+    // Profile 
+    .profile {
+        .user-information {
+            display: flex;
+            gap: 1.5rem;
+
+            .info {
+                min-width: 170px;
+                text-align: center;
+            }
+        }
+    }
+}

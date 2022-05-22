@@ -8,13 +8,15 @@ const Courses = () => {
   return (
     <div className='courses container'>
       <h3>Available Courses</h3>
-      {courses.map((course) => (
-        <div>
-          <Link to={`/courses/${course.id}`} key={course.id}>
-            {course.name}
-          </Link>
-        </div>
-      ))}
+      <div className='course-list'>
+        {courses.map((course) => (
+          <div>
+            <Link to={`/courses/${course.id}`} key={course.id}>
+              {course.name}
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

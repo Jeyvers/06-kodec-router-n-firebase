@@ -10,9 +10,9 @@ const Dashboard = () => {
     <section className='dashboard '>
       <div className='dashboard-showcase container'>
         <div className='user-showcase'>
-          <div>
+          <div className='dashboard-user-info'>
             <h1>
-              Welcome, <br /> <span> {user.displayName}</span>
+              Welcome, <span> {user.displayName}</span>
             </h1>
             <p>We have lots of courses for you!</p>
             <Link to={'/courses'}>

@@ -8,7 +8,7 @@
 }
 
 .text {
-    display: none;
+    visibility: hidden;
 }
 
 aside {
@@ -42,21 +42,11 @@ li {
             background: $primary-color;
 
             .text {
-                display: block;
+                visibility: visible;
             }
         }
 
 
     }
 
-}
-
-
-
-
-
-li a svg {
-
-    width: 25px;
-    height: 25px;
 }
