@@ -24,7 +24,7 @@ function App() {
   return !user ? (
     <div className='App'>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/06-kodec-router-n-firebase/' element={<Home />} />
         <Route
           path='/login'
           element={<Login error={error} runError={runError} />}
