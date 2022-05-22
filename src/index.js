@@ -4,16 +4,16 @@ import './css/index.css';
 import App from './App';
 import { AppProvider } from './context';
 import reducer, { initialState } from './reducer';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <AppProvider reducer={reducer} initialState={initialState}>
         <App />
       </AppProvider>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
 

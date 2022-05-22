@@ -2,9 +2,11 @@ import React from 'react';
 import { useNavigate } from 'react-router';
 import { LoginFocusIcon } from '../icons';
 import {
+  getRedirectResult,
   GoogleAuthProvider,
   signInWithEmailAndPassword,
   signInWithPopup,
+  signInWithRedirect,
 } from 'firebase/auth';
 import { useState } from 'react';
 import { auth, provider } from '../firebase';
