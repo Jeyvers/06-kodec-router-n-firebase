@@ -1,7 +1,4 @@
 import React from 'react';
-import { MdDashboard, MdClass } from 'react-icons/md';
-import { AiFillProfile } from 'react-icons/ai';
-import { RiLogoutBoxFill } from 'react-icons/ri';
 import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
