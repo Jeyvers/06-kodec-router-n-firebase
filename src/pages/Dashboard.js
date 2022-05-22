@@ -7,8 +7,8 @@ const Dashboard = () => {
   const [{ user }, dispatch] = useStateValue();
   console.log(user);
   return (
-    <section className='dashboard'>
-      <div className='dashboard-showcase'>
+    <section className='dashboard '>
+      <div className='dashboard-showcase container'>
         <div className='user-showcase'>
           <div>
             <h1>

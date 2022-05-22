@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 import { useStateValue } from '../context';
 import { actionTypes } from '../reducer';
 
-const Login = ({ runError }) => {
+const Login = ({ error, runError }) => {
   const [{}, dispatch] = useStateValue();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -55,7 +55,7 @@ const Login = ({ runError }) => {
       setEmail('');
       setPassword('');
       setDisplayName('');
-    } else runError('Please fill all fields with the appropriate information');
+    } else runError('Please in fill all fields.');
   };
 
   const signInWithGoogle = () => {
@@ -104,6 +104,11 @@ const Login = ({ runError }) => {
           </div>
           <div className='login-form'>
             <form onSubmit={(e) => loginWithEP(e)}>
+              {error.err && (
+                <div className='error-message'>
+                  <p>{error.message}</p>
+                </div>
+              )}
               <input
                 type='text'
                 placeholder='Enter username'

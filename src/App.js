@@ -23,15 +23,16 @@ function App() {
 
   return !user ? (
     <div className='App'>
-      {error.err && (
-        <div className='error-message'>
-          <p>{error.message}</p>
-        </div>
-      )}
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/login' element={<Login runError={runError} />} />
-        <Route path='/register' element={<Register runError={runError} />} />
+        <Route
+          path='/login'
+          element={<Login error={error} runError={runError} />}
+        />
+        <Route
+          path='/register'
+          element={<Register error={error} runError={runError} />}
+        />
         <Route path='*' element={<Error />} />
       </Routes>
     </div>

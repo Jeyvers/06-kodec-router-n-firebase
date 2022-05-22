@@ -5,22 +5,30 @@ const Profile = () => {
   const [{ user }, dispatch] = useStateValue();
 
   return (
-    <section>
-      <div>
-        <h1>Profile</h1>
-        <div className='img'>
-          <img
-            src={
-              user.photoURL
-                ? user.photoURL
-                : `https://avatars.dicebear.com/api/human/:${user.uid}.svg`
-            }
-            alt=''
-          />
+    <section className='profile '>
+      <div className='container'>
+        <div className='parent-info'>
+          <h1>Profile</h1>
+          <div className='profile-img'>
+            <img
+              src={
+                user.photoURL
+                  ? user.photoURL
+                  : `https://avatars.dicebear.com/api/human/:${user.uid}.svg`
+              }
+              alt=''
+            />
+          </div>
         </div>
         <div className='user-information'>
-          <h2>{user.displayName}</h2>
-          <h2>{user.email}</h2>
+          <div className='info'>
+            <span>Username</span>
+            <h3>{user.displayName}</h3>
+          </div>
+          <div className='info'>
+            <span>Email</span>
+            <h3>{user.email}</h3>
+          </div>
         </div>
       </div>
     </section>

@@ -6,11 +6,14 @@ const Courses = () => {
   const [courses, setCourses] = useState(Db);
 
   return (
-    <div>
+    <div className='courses container'>
+      <h3>Available Courses</h3>
       {courses.map((course) => (
-        <Link to={`/courses/${course.id}`} key={course.id}>
-          <div>{course.name}</div>
-        </Link>
+        <div>
+          <Link to={`/courses/${course.id}`} key={course.id}>
+            {course.name}
+          </Link>
+        </div>
       ))}
     </div>
   );

@@ -10,15 +10,15 @@ const SingleCourse = () => {
   const course = courses.find((course) => course.id == courseId);
   console.log(course);
   return (
-    <section className='singleCourseContainer'>
-      <div className='singleCourseIntroImg'>
+    <section className='single-course container'>
+      <div className='single-course-img'>
         <TeacherIllus />
         <p>Introduction to {course.name}</p>
       </div>
       <div className='single-course-info'>
         <h3>Introduction to {course.name}</h3>
         <p>{course.details.intro}</p>
-        <h5>Branches</h5>
+        <h4>Branches</h4>
         <ul>
           {course.details.branches.map((branch) => (
             <li>{branch}</li>

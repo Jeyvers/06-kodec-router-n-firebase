@@ -25,6 +25,10 @@ button {
   cursor: pointer;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .home {
   background: #4b45c2;
   color: #FFF;
@@ -208,7 +212,7 @@ nav button {
   height: 40px;
   width: 250px;
   padding: 0 .5rem;
-  margin: .5rem 0;
+  margin: .5rem;
 }
 
 .login-container .login-showcase .login-showcase-info .login-form button {
@@ -259,7 +263,7 @@ nav button {
 
 aside {
   background: #003682;
-  height: 100%;
+  height: 100vh;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -304,10 +308,6 @@ li a svg {
   line-height: 2rem;
 }
 
-.dashboard-showcase {
-  margin: 3.75rem 1rem;
-}
-
 .user-showcase {
   height: 60%;
   background: #FFF;
@@ -343,11 +343,194 @@ li a svg {
   font-weight: 700;
 }
 
+.courses h3, .courses .single-course .single-course-info h4, .single-course .single-course-info .courses h4 {
+  margin-bottom: 1rem;
+}
+
+.courses div {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.courses div a {
+  display: inline-block;
+  padding: 1rem;
+  color: #FFF;
+  font-weight: 700;
+}
+
+.courses div:nth-child(n + 1) {
+  background-color: #4b45c2;
+}
+
+.courses div:nth-child(2n + 1) {
+  background-color: #2cccfd;
+}
+
+.single-course .single-course-img {
+  background-color: #003682;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+.single-course .single-course-img p {
+  color: white;
+  text-transform: capitalize;
+  text-align: center;
+  line-height: 2rem;
+}
+
+.single-course .single-course-info {
+  margin: 1rem 0;
+}
+
+.single-course .single-course-info h3, .single-course .single-course-info h4 {
+  padding: .5rem 0;
+}
+
+.single-course .single-course-info p {
+  color: #222;
+}
+
+.single-course .single-course-info h4 {
+  display: inline-block;
+  border-bottom: 1px solid #2cccfd;
+}
+
+.single-course .single-course-info li {
+  padding: .6rem 0;
+}
+
+.profile {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.profile .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile h1 {
+  text-align: center;
+}
+
+.user-information .info {
+  margin-top: 1.5rem;
+}
+
+.user-information .info > * {
+  margin: .4rem 0;
+}
+
+.user-information .info span {
+  font-size: 14px;
+}
+
+.user-information h3, .user-information .single-course .single-course-info h4, .single-course .single-course-info .user-information h4 {
+  padding: .5rem 1rem;
+  font-size: 18px;
+  background: #f4f7f8;
+}
+
+.profile-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+}
+
+.error .error-icon {
+  width: 50%;
+  padding-bottom: 2rem;
+}
+
+.error .error-info {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.error .error-info span {
+  color: #4b45c2;
+}
+
+.error .other-options {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.error .other-options button {
+  width: 130px;
+  height: 40px;
+  margin-top: 2.5rem;
+  color: #FFF;
+  font-weight: 700;
+  background: #4b45c2;
+}
+
+.error-message {
+  margin: 1rem 0;
+  padding: .5rem 1rem;
+}
+
+.error-message p {
+  background: rgba(251, 84, 84, 0.948);
+  border: red 1px solid;
+  font-size: 14px;
+  padding: .5rem 0;
+  color: #FFF;
+  min-width: 250px;
+  min-height: 40px;
+  background: #da0505;
+}
+
 .user-app {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
   width: 100vw;
+}
+
+.container {
+  margin: 4rem 2rem;
 }
 /*# sourceMappingURL=index.css.map */

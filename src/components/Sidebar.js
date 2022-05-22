@@ -50,7 +50,7 @@ const Sidebar = () => {
         <li>
           <Link to={'/profile'}>
             <span className='icon'>
-              <i class='uil uil-airplay'></i>
+              <i class='uil uil-user'></i>
             </span>
             <span className='text'>{'Profile'}</span>
           </Link>

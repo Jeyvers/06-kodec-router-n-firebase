@@ -3,9 +3,16 @@
 @import 'login';
 @import 'sidebar';
 @import 'dashboard';
+@import 'courses';
+@import 'profile';
+@import 'error';
 
 .user-app {
     display: flex;
     height: 100vh;
     width: 100vw;
+}
+
+.container {
+    margin: 4rem 2rem;
 }

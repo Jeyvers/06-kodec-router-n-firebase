@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { auth } from '../firebase';
 import { Link, useNavigate } from 'react-router-dom';
 
-const Register = ({ runError }) => {
+const Register = ({ runError, error }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const regex = new RegExp('[a-z0-9]+@[a-z]+.[a-z]{2,3}');
@@ -67,6 +67,11 @@ const Register = ({ runError }) => {
             <span>TERRIS</span>
           </div>
           <div className='login-form'>
+            {error.err && (
+              <div className='error-message'>
+                <p>{error.message}</p>
+              </div>
+            )}
             <form onSubmit={(e) => registerWithEP(e)}>
               <input
                 type='email'
