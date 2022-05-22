@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/06-kodec-router-n-firebase/static/css/main.92ebcddc.css",
+    "main.css": "/06-kodec-router-n-firebase/static/css/main.29a065a8.css",
     "main.js": "/06-kodec-router-n-firebase/static/js/main.d415adc6.js",
     "static/media/landing-page-girl.png": "/06-kodec-router-n-firebase/static/media/landing-page-girl.913e065ab6519d8bde82.png",
     "static/media/rough-bg.png": "/06-kodec-router-n-firebase/static/media/rough-bg.8f62243df2c672c5c9ed.png",
     "static/media/undraw_handcrafts_mention.png": "/06-kodec-router-n-firebase/static/media/undraw_handcrafts_mention.919a0ce539f3fe8043a3.png",
     "index.html": "/06-kodec-router-n-firebase/index.html",
-    "main.92ebcddc.css.map": "/06-kodec-router-n-firebase/static/css/main.92ebcddc.css.map",
+    "main.29a065a8.css.map": "/06-kodec-router-n-firebase/static/css/main.29a065a8.css.map",
     "main.d415adc6.js.map": "/06-kodec-router-n-firebase/static/js/main.d415adc6.js.map"
   },
   "entrypoints": [
-    "static/css/main.92ebcddc.css",
+    "static/css/main.29a065a8.css",
     "static/js/main.d415adc6.js"
   ]
 }
