@@ -13,7 +13,7 @@ const Error = () => {
         <span> Me too!</span>{' '}
         <p>Your session has either expired or this page doesn't exist.</p>
         <div className='other-options'>
-          <Link to={'/06-kodec-router-n-firebase'}>
+          <Link to={'/'}>
             <button>Go back home</button>
           </Link>
 
