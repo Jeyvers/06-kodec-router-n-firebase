@@ -603,11 +603,15 @@ li a:hover .text {
   .course-list div {
     width: 170px;
   }
+  .single-course {
+    width: 600px;
+  }
   .single-course .single-course-img {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    height: 200px;
   }
   .single-course .single-course-img p {
     text-transform: uppercase;

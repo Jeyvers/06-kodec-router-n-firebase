@@ -93,8 +93,12 @@
 
     // Single Course 
     .single-course {
+        width: 600px;
+
         .single-course-img {
             flex-direction: row;
+            height: 200px;
+
 
             p {
                 text-transform: uppercase;
