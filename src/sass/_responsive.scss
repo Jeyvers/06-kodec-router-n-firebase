@@ -119,4 +119,18 @@
             }
         }
     }
+
+    // Error 
+    .error {
+        flex-direction: row;
+        gap: 2rem;
+
+        .error-icon {
+            height: 390px;
+        }
+
+        .error-info {
+            text-align: left;
+        }
+    }
 }

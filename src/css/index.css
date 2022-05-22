@@ -493,13 +493,14 @@ li a:hover .text {
 }
 
 .error .other-options {
-  width: 100%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 1rem;
 }
 
 .error .other-options button {
@@ -522,7 +523,7 @@ li a:hover .text {
   font-size: 14px;
   padding: .5rem 0;
   color: #FFF;
-  min-width: 250px;
+  min-width: 210px;
   min-height: 40px;
   background: #da0505;
 }
@@ -624,6 +625,19 @@ li a:hover .text {
   .profile .user-information .info {
     min-width: 170px;
     text-align: center;
+  }
+  .error {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 2rem;
+  }
+  .error .error-icon {
+    height: 390px;
+  }
+  .error .error-info {
+    text-align: left;
   }
 }
 
