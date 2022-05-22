@@ -54,7 +54,7 @@ const Sidebar = () => {
         </li>
 
         <li onClick={logUserOut}>
-          <Link to={'/'}>
+          <Link to={'/06-kodec-router-n-firebase'}>
             <span className='icon'>
               <i class='uil uil-signout'></i>
             </span>
