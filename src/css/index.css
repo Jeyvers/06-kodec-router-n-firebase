@@ -102,6 +102,7 @@ nav button {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 50px;
+  background: #4b45c2;
 }
 
 .landing-showcase {
@@ -143,12 +144,12 @@ nav button {
 .app-information {
   padding: 2rem 0;
   color: #222;
+  background-color: white;
   text-align: center;
 }
 
 .login-container {
   width: 100vw;
-  height: 100vh;
   display: -ms-grid;
   display: grid;
   margin: 0 auto;
@@ -264,19 +265,17 @@ nav button {
 .icon {
   font-size: 18px;
   color: #FFF;
-  padding: .2rem;
+  padding-right: .4rem;
 }
 
 .text {
-  visibility: hidden;
+  font-weight: 700;
+  display: none;
 }
 
 aside {
   background: #003682;
   height: 100vh;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -287,36 +286,43 @@ aside h4 {
   margin: 4rem 0;
 }
 
+aside ul {
+  width: 100%;
+}
+
 li {
   position: relative;
   padding: .6rem 2rem;
 }
 
 li a {
+  padding: 1rem;
   display: inline-block;
   color: white;
 }
 
-li a:hover {
-  background: #4b45c2;
-}
-
 li a:hover .text {
-  visibility: visible;
+  top: 10px;
+  border-radius: 1rem 0;
+  position: absolute;
+  background-color: #003682;
+  display: inline;
+  padding: 1rem;
 }
 
 .dashboard {
   display: -ms-grid;
   display: grid;
   height: 100vh;
+  width: 100vw;
   background: #074baa;
   line-height: 2rem;
 }
 
 .user-showcase {
-  height: 60%;
+  line-height: 2;
   background: #FFF;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -325,6 +331,10 @@ li a:hover .text {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.user-showcase .user-img-showcase {
+  height: 240px;
 }
 
 .user-showcase h1 span {
@@ -337,13 +347,14 @@ li a:hover .text {
 
 .user-showcase a {
   display: inline-block;
-  margin-top: .5rem;
+  margin-top: 1rem;
   padding: .1rem 2rem;
   background: #2cccfd;
   border-radius: .5rem;
 }
 
 .user-showcase a button {
+  width: 150px;
   color: #FFF;
   font-weight: 700;
 }
@@ -454,7 +465,7 @@ li a:hover .text {
 
 .user-information h3, .user-information .single-course .single-course-info h4, .single-course .single-course-info .user-information h4 {
   padding: .5rem 1rem;
-  font-size: 18px;
+  font-size: 15px;
   background: #f4f7f8;
 }
 
@@ -549,6 +560,9 @@ li a:hover .text {
   .landing .app-information {
     background-color: #FFF;
   }
+  .login-container {
+    height: 100vh;
+  }
   .login-container .login-showcase {
     display: -ms-grid;
     display: grid;
@@ -556,10 +570,10 @@ li a:hover .text {
         grid-template-columns: repeat(2, 1fr);
   }
   aside {
-    min-width: 180px;
+    min-width: 230px;
   }
   aside .text {
-    visibility: visible;
+    display: inline;
   }
   .dashboard {
     width: 100vw;
@@ -577,6 +591,7 @@ li a:hover .text {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 2rem;
   }
   .dashboard .user-showcase h1 {
     font-size: 2rem;
@@ -587,10 +602,6 @@ li a:hover .text {
   .dashboard .user-showcase .dashboard-user-info {
     min-width: 300px;
     line-height: 2;
-  }
-  .dashboard .user-showcase .dashboard-user-info button {
-    width: 150px;
-    border-radius: none;
   }
   .course-list {
     display: -webkit-box;
@@ -629,6 +640,9 @@ li a:hover .text {
   .profile .user-information .info {
     min-width: 170px;
     text-align: center;
+  }
+  .profile .user-information h3, .profile .user-information .single-course .single-course-info h4, .single-course .single-course-info .profile .user-information h4 {
+    font-size: 18px;
   }
   .error {
     -webkit-box-orient: horizontal;

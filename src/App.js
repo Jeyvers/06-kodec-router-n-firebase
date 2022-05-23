@@ -16,7 +16,7 @@ function App() {
   const [{ user }, dispatch] = useStateValue();
 
   const runError = (errMessage) => {
-    window.scroll(0, 0);
+    // window.scroll(0, 0);
     setError({ err: true, message: errMessage });
     setTimeout(() => setError({ err: false, message: '' }), 3000);
   };

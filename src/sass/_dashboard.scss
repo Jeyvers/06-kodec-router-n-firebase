@@ -1,17 +1,22 @@
 .dashboard {
     display: grid;
     height: 100vh;
+    width: 100vw;
     background: #074baa;
     line-height: 2rem;
 }
 
 .user-showcase {
-    height: 60%;
+    line-height: 2;
     background: $white-color;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
+
+    .user-img-showcase {
+        height: 240px;
+    }
 
     h1 span {
         color: $secondary-color;
@@ -23,12 +28,13 @@
 
     a {
         display: inline-block;
-        margin-top: .5rem;
+        margin-top: 1rem;
         padding: .1rem 2rem;
         background: $secondary-color;
         border-radius: .5rem;
 
         button {
+            width: 150px;
             color: $white-color;
             font-weight: $bold-font-weight;
         }

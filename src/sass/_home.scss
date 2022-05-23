@@ -56,9 +56,11 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 50px;
+    background: $primary-color;
 }
 
 .landing-showcase {
+
     width: 80%;
     margin: auto;
     display: flex;
@@ -89,6 +91,7 @@ nav {
 
     .landing-image {
         margin-top: -70px;
+        // height: 505px;
         // width: 190px;
     }
 }
@@ -96,6 +99,7 @@ nav {
 .app-information {
     padding: 2rem 0;
     color: $black-color;
+    background-color: white;
     text-align: center;
 
 }

@@ -27,7 +27,7 @@
 
     // Login
     .login-container {
-
+        height: 100vh;
 
         .login-showcase {
             display: grid;
@@ -40,12 +40,12 @@
 
     // Sidebar
     aside {
-        min-width: 180px;
+        min-width: 230px;
 
 
 
         .text {
-            visibility: visible;
+            display: inline;
         }
     }
 
@@ -55,10 +55,12 @@
         height: 100vh;
 
         .user-showcase {
+            // height: 60%;
             flex-direction: row;
             justify-content: space-evenly;
             height: 400px;
             align-items: center;
+            padding: 2rem;
 
             h1 {
                 font-size: 2rem;
@@ -72,11 +74,9 @@
                 min-width: 300px;
                 line-height: 2;
 
-                button {
-                    width: 150px;
-                    border-radius: none;
-                }
             }
+
+
         }
     }
 
@@ -120,6 +120,10 @@
             .info {
                 min-width: 170px;
                 text-align: center;
+            }
+
+            h3 {
+                font-size: 18px;
             }
         }
     }
