@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { useStateValue } from './context';
 import Courses from './components/Courses';
 import Profile from './components/Profile';
 import Sidebar from './components/Sidebar';
 import SingleCourse from './components/SingleCourse';
-import { useStateValue } from './context';
 import Dashboard from './pages/Dashboard';
 import Error from './pages/Error';
 import Home from './pages/Home';
@@ -43,9 +43,8 @@ function App() {
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/courses' element={<Courses />} />
         <Route path='/courses/:courseId' element={<SingleCourse />} />
-        <Route path='*' element={<Error />}></Route>
-
         <Route path='/profile' element={<Profile />} />
+        <Route path='*' element={<Error />}></Route>
       </Routes>
     </div>
   );
